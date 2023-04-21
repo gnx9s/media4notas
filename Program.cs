@@ -32,18 +32,21 @@ if (gradeValid)
     
     if (media < 5)
     {
+        Console.ForegroundColor = ConsoleColor.Red;
         resultado = "Infelizmente você foi reprovado!";
     }
     
     else
     {
         if (media > 6)
-        {
+        {   
+            Console.ForegroundColor = ConsoleColor.Green; 
             resultado = "Você foi aprovado, parabéns!";
         }
 
         else 
-        {
+        {   
+            Console.ForegroundColor = ConsoleColor.Yellow;
             resultado = "Você está de recuperação!";
         }
     }
@@ -57,5 +60,6 @@ Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("Digite notas presentes apenas entre 0 e 10. ");
 Console.ResetColor();
 }
+Console.ResetColor();
 
 // tadoido que demora pra fazer
